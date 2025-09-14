@@ -1,0 +1,52 @@
+/* ===== Part 1: CSS Transitions & Animations ===== */
+
+/* Button hover transition */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+  background: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* Keyframe animation: bouncing box */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: tomato;
+  animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50px); }
+}
+
+/* ===== Part 3: Popup Animation ===== */
+.popup {
+  width: 250px;
+  padding: 20px;
+  background: #f1c40f;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.5s ease;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -100px);
+}
+
+.popup.active {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
